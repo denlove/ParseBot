@@ -1,0 +1,10 @@
+services:
+    bot:
+        build: .
+        command: yarn start
+        container_name: tg_bot
+        env_file:
+            - .env
+        volumes:
+            - ./:/app/
+            - /app/node_modules
